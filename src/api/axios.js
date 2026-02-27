@@ -3,6 +3,7 @@ import axios from "axios";
 const api = axios.create({
   baseURL: "https://e-commerce-backend-xqvn.onrender.com/api",
   headers: { "Content-Type": "application/json" },
+  timeout: 10000, // 10 second timeout
 });
 
 api.interceptors.request.use((config) => {
